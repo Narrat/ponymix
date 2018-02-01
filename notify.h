@@ -70,15 +70,15 @@ class LibnotifyNotifier : public Notifier {
 
  private:
   void volchange(long vol, bool mute) const {
-    const char* icon = "notification-audio-volume-muted";
+    const char* icon = "audio-volume-muted";
 
     if (!mute) {
       if (vol > 67) {
-        icon = "notification-audio-volume-high";
+        icon = "audio-volume-high";
       } else if (vol > 33) {
-        icon = "notification-audio-volume-medium";
+        icon = "audio-volume-medium";
       } else if (vol > 0) {
-        icon = "notification-audio-volume-low";
+        icon = "audio-volume-low";
       }
     }
 
